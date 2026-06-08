@@ -44,8 +44,7 @@ All models trained on an **80/20 stratified split**. Evaluation uses:
 
 Users with fewer than 5 ratings are served via a Bayesian-smoothed popularity score:
 
-![Formula](https://latex.codecogs.com/svg.image?\color{LightBlue}\hat{s}(i)=\frac{n_i\cdot\bar{r}_i+C\cdot\mu}{n_i+C})
-
+![Formula](https://latex.codecogs.com/svg.image?\color{white}\hat{s}(i)=\frac{n_i\cdot\bar{r}_i+C\cdot\mu}{n_i+C})
 Where $n_i$ is the rating count for movie $i$, $\bar{r}_i$ its mean rating, $\mu$ the global mean, and $C$ the mean rating count across all movies (the confidence weight). This prevents low-count movies from appearing artificially high-rated.
 
 Cold-start users can also declare genre preferences, which filters the popularity ranking to genre-matching films.
